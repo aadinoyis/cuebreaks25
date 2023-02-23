@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Next+</title>
+  
+  <!-- Custom Links -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="https://cuebreaks25.netlify.app" class="logo">cuebreaks25</a>
+    
+    <a href="https://cuebreaks25.netlify.app#reg"><button>Join</button></a>
+  </header>
+  
+  <section>
+    <div class="title">
+      <h2 class="main-title">Next+</h2>
+      <p class="sub-title">A counter App</p>
+    </div>
+    
+    <div class="main">
+      <!--
+      the data-(attr-name)="value" lets you set a custom attribute,
+      you can change or rename it 
+      -->
+      <h2 id="display" data-min="0" data-max="10"></h2>
+    
+      <div class="controls">
+        <button id="decrement">decrease</button>
+        <button id="reset">reset</button>
+        <button id="increment">increase</button>
+      </div>
+    </div>
+    
+    <footer><p id="copy"></p></footer>
+  </section>
+  
+  <!-- scripts-->
+  <script src="main.js"></script>
+</body>
+</html>

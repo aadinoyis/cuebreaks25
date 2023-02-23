@@ -1,0 +1,193 @@
+*, *::before, *::after {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+:root {
+  --white: #fefefe;
+  --white-x: #f2f2f2;
+  --black: #191919;
+  --black-x: #313131;
+  --red: #b32d00;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  width: 100vw;
+  height: 100vh;
+  background: var(--white);
+  color: var(--black-x);
+}
+
+ul{
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2 {
+  font-size: 3em;
+  color: var(--black);
+  font-weight: normal;
+}
+
+p {
+  line-height: 1.5;
+}
+
+button {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding: 1em 2em;
+  background: var(--white-x);
+  outline: none;
+  border: none;
+  border: 1px dashed var(--black);
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: .875em;
+  font-weight: bold;
+}
+
+button:hover {
+  background: var(--white);
+}
+
+header {
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  top: 0;
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  background: var(--white-x);
+}
+
+.logo {
+  color: var(--black-x);
+  font-size: .875em;
+  text-transform: uppercase;
+  letter-spacing: .75em;
+  animation: dense 1s ease-out 2s infinite alternate;
+}
+
+@keyframes dense {
+  from {
+    letter-spacing: .75em;
+  }
+  to {
+    letter-spacing: 1em;
+  }
+}
+
+section {
+  padding: 4em 5%;
+  padding-top: calc(10% + 4em);
+  height: 100vh;
+  background: rgba(242, 242, 242, .9);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 3em;
+  color: var(--black);
+  font-weight: normal; 
+}
+
+.sub-title {
+  font-size: .875em;
+  color: var(--black-x);
+  letter-spacing: .5em;
+  line-height: 1.5;
+}
+
+
+/*
+  CUSTOM STYLING STARTS HERE
+*/
+
+.main {
+  flex: 1;
+  margin: 5% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-box {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.quote-box span {
+  font-size: 3em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-1em);
+  color: var(--red);
+}
+
+blockquote {
+  opacity: 1;
+  transition: opacity 5s;
+} 
+
+blockquote p {
+  margin-bottom: 1em;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.copy-state {
+  margin-top: 1em;
+  position: relative;
+}
+
+.copy-state span {
+  position: absolute;
+  width: 125px;
+  bottom: 0;
+  left: calc(50% - 125px/2);
+  background: var(--white);
+  padding: .5em;
+  display: none;
+  box-shadow: 0 0 13px rgba(17, 17, 17, .3);
+}
+
+.copy-state .btn {
+  background: transparent;
+}
+
+.copy-state .btn:hover {
+  border: none;
+}
+
+.btn {
+  padding: 1em 2em;
+  margin-top: 2em;
+  background: var(--white);
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: .875em;
+  font-weight: bold;
+}
+
+.btn:hover {
+  border: 1px dashed var(--black);
+}
+
+footer {
+  text-align: center;
+}

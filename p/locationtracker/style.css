@@ -1,0 +1,192 @@
+*, *::before, *::after {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+:root {
+  --white: #fefefe;
+  --white-x: #f2f2f2;
+  --black: #191919;
+  --black-x: #313131;
+  --red: #b32d00;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  width: 100vw;
+  height: 100vh;
+  background: var(--white);
+  color: var(--black-x);
+}
+
+ul{
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2 {
+  font-size: 3em;
+  color: var(--black);
+  font-weight: normal;
+}
+
+p {
+  line-height: 1.5;
+}
+
+button {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding: 1em 2em;
+  background: var(--white-x);
+  outline: none;
+  border: none;
+  border: 1px dashed var(--black);
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: .875em;
+  font-weight: bold;
+}
+
+button:hover {
+  background: var(--white);
+}
+
+header {
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  top: 0;
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  background: var(--white-x);
+}
+
+.logo {
+  color: var(--black-x);
+  font-size: .875em;
+  text-transform: uppercase;
+  letter-spacing: .75em;
+  animation: dense 1s ease-out 2s infinite alternate;
+}
+
+@keyframes dense {
+  from {
+    letter-spacing: .75em;
+  }
+  to {
+    letter-spacing: 1em;
+  }
+}
+
+section {
+  padding: 4em 5%;
+  padding-top: calc(10% + 4em);
+  height: 100vh;
+  background: rgba(242, 242, 242, .15);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('bg.jpg') no-repeat center center/cover;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  z-index: -1;
+}
+
+
+.main-title {
+  font-size: 3em;
+  color: var(--black);
+  font-weight: normal; 
+}
+
+.sub-title {
+  font-size: .875em;
+  color: var(--black-x);
+  letter-spacing: .5em;
+  line-height: 1.5;
+}
+
+
+/*
+  CUSTOM STYLING STARTS HERE
+*/
+
+.main {
+  flex: 1;
+  margin: 5% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#status {
+  position: absolute;
+  top: 74px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 74%;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: rgba(255, 63, 63, 0.4);
+  font-family: monospace;
+  font-size: 16px;
+  opacity: 0;
+  color: white;
+  transition: 0.5s;
+}
+
+.region {
+  margin-bottom: 2rem;
+}
+
+.region i {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+#city {
+  font-size: 1.9rem;
+  font-weight: normal;
+}
+
+.btn {
+  padding: 1em 2em;
+  margin-top: 2em;
+  background: var(--white);
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: .875em;
+  font-weight: bold;
+}
+
+.btn:hover {
+  border: 1px dashed var(--black);
+}
+
+footer {
+  text-align: center;
+}

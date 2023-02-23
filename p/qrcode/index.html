@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Qcode</title>
+  
+  <!-- Custom Links -->
+  <link rel="stylesheet" href="../../res/fontawesome-free-6.1.1-web/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="https://cuebreaks25.netlify.app" class="logo">cuebreaks25</a>
+    
+    <a href="https://cuebreaks25.netlify.app#reg"><button>Join</button></a>
+  </header>
+  
+  <section>
+    <div class="title">
+      <h2 class="main-title">Qcode</h2>
+      <p class="sub-title">QR Code Generator</p>
+    </div>
+    
+    <div class="main">
+      <div class="display">
+        <figure class="image-container">
+          <img id="qrimg">
+        </figure>
+      </div>
+      
+      <div class="editor">
+        <input type="text" id="qrtxt" placeholder="input link/text">
+        
+        <a class="btn" id="qrbtn">Generate qr code</a>
+      </div>
+    </div>
+  </section>
+  
+  <footer><p id="copy"></p></footer>
+  
+  <!-- scripts-->
+  <script src="main.js"></script>
+</body>
+</html>
